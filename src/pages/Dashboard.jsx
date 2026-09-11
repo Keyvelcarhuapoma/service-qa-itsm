@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Play, Plus, Network, CheckCircle, AlertCircle, Clock, Timer, Search, Download, Activity, Loader } from 'lucide-react';
 import { supabase } from '../supabaseClient';
 import './Dashboard.css';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [servicios, setServicios] = useState([]);
   const [validaciones, setValidaciones] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -62,10 +64,10 @@ const Dashboard = () => {
           <p>Monitorización continua de disponibilidad, transaccionalidad y cumplimiento de SLAs de infraestructura corporativa en tiempo real.</p>
         </div>
         <div className="header-actions">
-          <button className="btn btn-secondary">
+          <button className="btn btn-secondary" onClick={() => navigate("/validacion")}>
             <Play size={16} fill="currentColor" /> Ejecutar Validación
           </button>
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={() => navigate("/registro")}>
             <Plus size={16} /> Registrar Nuevo Servicio
           </button>
         </div>
