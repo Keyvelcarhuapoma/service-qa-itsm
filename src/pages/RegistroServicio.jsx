@@ -153,7 +153,7 @@ const RegistroServicio = () => {
                 <label className="form-label">Fecha Estimada de Puesta en Marcha <span className="req-star">*</span></label>
                 <div className="input-with-icon">
                   <Calendar size={16} className="input-icon-left" />
-                  <input type="text" className="form-input" value="05/18/2024" readOnly />
+                  <input type="date" className="form-input" defaultValue={new Date().toISOString().split("T")[0]} />
                 </div>
               </div>
               <div className="form-group">
@@ -275,3 +275,4 @@ const RegistroServicio = () => {
 };
 
 export default RegistroServicio;
+
