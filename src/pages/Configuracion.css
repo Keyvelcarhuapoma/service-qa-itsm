@@ -1,0 +1,245 @@
+.config-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.config-header {
+  margin-bottom: 1rem;
+}
+
+.config-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.config-header p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.config-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Side Navigation */
+.config-sidebar {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.config-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.config-nav-item:hover {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.config-nav-item.active {
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+}
+
+.config-nav-item.active .config-icon {
+  color: var(--primary);
+}
+
+.config-icon {
+  color: var(--text-muted);
+}
+
+/* Content Area */
+.config-content {
+  flex: 1;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.config-section-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fafbfc;
+}
+
+.config-section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.config-section-header p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.config-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Settings Items */
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting-info {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.setting-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-main);
+}
+
+.setting-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.setting-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Toggles */
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch.active {
+  background-color: var(--success);
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.toggle-switch.active .toggle-knob {
+  transform: translateX(20px);
+}
+
+/* Input Fields in Settings */
+.setting-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  width: 300px;
+}
+
+.setting-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  outline: none;
+  background-color: #f9fafb;
+}
+
+.setting-input:focus {
+  border-color: var(--primary);
+  background-color: white;
+}
+
+.integration-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.integration-card:hover {
+  border-color: var(--primary-light);
+  background-color: #f8fafc;
+}
+
+.integration-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.integration-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integration-icon.slack { background-color: #f3e8ff; color: #9333ea; }
+.integration-icon.pager { background-color: #dcfce7; color: #16a34a; }
+.integration-icon.jira { background-color: #e0f2fe; color: #0284c7; }
+
+.integration-details h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.integration-details p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
