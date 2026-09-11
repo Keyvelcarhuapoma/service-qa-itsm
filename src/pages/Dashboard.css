@@ -422,3 +422,11 @@
   font-size: 0.75rem;
   color: var(--text-muted);
 }
+
+@media (max-width: 768px) {
+  .dashboard-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .inventory-toolbar { flex-direction: column; align-items: stretch; }
+  .search-bar { width: 100% !important; }
+  .inventory-section { overflow-x: auto; }
+}

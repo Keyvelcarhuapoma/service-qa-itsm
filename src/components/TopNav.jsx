@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Search, Bell, HelpCircle } from 'lucide-react';
+import { Search, Bell, HelpCircle, Menu } from 'lucide-react';
 import './TopNav.css';
 
-const TopNav = () => {
+const TopNav = ({ onMenuClick }) => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
     <header className="topnav">
+      <button className="mobile-menu-btn" onClick={onMenuClick}><Menu size={24} /></button>
       <div className="breadcrumb">
         {/* Breadcrumb can be dynamic later */}
         <span className="text-muted">ITSM Core</span>

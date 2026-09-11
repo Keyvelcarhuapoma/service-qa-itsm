@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, PlusSquare, CheckSquare, History, Settings, CheckCircle2 } from 'lucide-react';
+import { LayoutDashboard, PlusSquare, CheckSquare, History, Settings, CheckCircle2, X } from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
+        <button className="mobile-close-btn" onClick={() => setIsOpen(false)}><X size={20} /></button>
         <div className="logo-icon">
           <CheckCircle2 size={24} color="#1e3a8a" />
         </div>

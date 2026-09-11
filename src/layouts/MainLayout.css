@@ -18,3 +18,11 @@
   padding: 2rem;
   background-color: var(--bg-app);
 }
+
+@media (max-width: 768px) {
+  .main-content { padding: 1rem; }
+  .mobile-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5); z-index: 1000;
+  }
+}

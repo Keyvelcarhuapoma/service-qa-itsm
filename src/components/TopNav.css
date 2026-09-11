@@ -176,3 +176,11 @@
 .notif-content span { font-size: 0.7rem; color: var(--text-muted); }
 .notif-footer { padding: 0.75rem; text-align: center; font-size: 0.8rem; color: var(--primary); cursor: pointer; background: #f9fafb; border-top: 1px solid var(--border-color); font-weight: 500; }
 .notif-footer:hover { text-decoration: underline; }
+
+.mobile-menu-btn { display: none; background: none; border: none; color: var(--text-main); cursor: pointer; margin-right: 1rem; }
+@media (max-width: 768px) {
+  .mobile-menu-btn { display: block; }
+  .search-bar { display: none; }
+  .user-info { display: none; }
+  .topnav { padding: 1rem; }
+}
